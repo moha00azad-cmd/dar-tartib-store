@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="دار الترتيب | منتجات تنظيم المنزل والملابس والديكور في المغرب. شحن إلى جميع مدن المغرب ودفع عند الاستلام."
+    />
+    <meta
+      name="keywords"
+      content="منظمات منزلية المغرب، تنظيم الملابس، رفوف أحذية، صناديق تخزين، تنظيم الخزانة، منتجات منزلية" 
+    />
+    <title>دار الترتيب | متجر تنظيم المنزل بالمغرب</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span>🚚 التوصيل إلى جميع أنحاء المغرب</span>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="logo" aria-label="دار الترتيب">
+          <span class="logo-mark">دار</span>
+          <span class="logo-text">الترتيب</span>
+        </div>
+
+        <nav class="main-nav" aria-label="التنقل الرئيسي">
+          <a href="#home">الرئيسية</a>
+          <a href="#shop">المتجر</a>
+          <a href="#categories">التصنيفات</a>
+          <a href="#offers">العروض</a>
+          <a href="#about">من نحن</a>
+          <a href="#contact">تواصل معنا</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn search-trigger" aria-label="بحث">🔍 البحث</button>
+          <button class="cart-btn" id="cartToggle" aria-label="السلة">
+            🛒 <span>السلة</span>
+            <span class="cart-badge" id="cartCount">0</span>
+          </button>
+        </div>
+
+        <button class="mobile-menu-btn" aria-label="فتح القائمة">☰</button>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#home">الرئيسية</a>
+        <a href="#shop">المتجر</a>
+        <a href="#categories">التصنيفات</a>
+        <a href="#offers">العروض</a>
+        <a href="#about">من نحن</a>
+        <a href="#contact">تواصل معنا</a>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="badge">الدفع عند الاستلام 🇲🇦</span>
+            <h1>رتّب منزلك... واستغل كل مساحة بذكاء</h1>
+            <p>
+              منتجات عملية وعصرية لتنظيم ملابسك وأغراضك وجعل منزلك أكثر ترتيبًا
+              وراحة.
+            </p>
+            <div class="hero-actions">
+              <a href="#shop" class="btn btn-primary">تسوق الآن</a>
+              <a href="#offers" class="btn btn-secondary">شاهد العروض</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="منزل مرتب">
+            <div class="hero-card hero-card-main">
+              <img
+                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80"
+                alt="غرفة نوم مرتبة"
+              />
+            </div>
+            <div class="floating-box floating-box-top">
+              <span>📦</span>
+              <div>
+                <strong>توصيل سريع</strong>
+                <small>إلى جميع المدن</small>
+              </div>
+            </div>
+            <div class="floating-box floating-box-bottom">
+              <strong>4.8/5</strong>
+              <small>تقييم العملاء</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-bar">
+        <div class="container trust-grid">
+          <div class="trust-item">
+            <span>🚚</span>
+            <div>
+              <strong>توصيل لجميع أنحاء المغرب</strong>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span>💵</span>
+            <div>
+              <strong>الدفع عند الاستلام</strong>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span>📦</span>
+            <div>
+              <strong>منتجات عملية وعالية الجودة</strong>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span>📞</span>
+            <div>
+              <strong>خدمة العملاء: 0776260693</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories" id="categories">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">التصنيفات</span>
+            <h2>حلول تنظيم تعطيك مساحة أكثر</h2>
+          </div>
+          <div class="categories-grid" id="categoriesGrid"></div>
+        </div>
+      </section>
+
+      <section class="products section" id="shop">
+        <div class="container">
+          <div class="section-heading row-between">
+            <div>
+              <span class="eyebrow">المتجر</span>
+              <h2>🔥 الأكثر مبيعًا في المغرب</h2>
+            </div>
+            <div class="product-search-wrap">
+              <input
+                type="search"
+                id="productSearch"
+                placeholder="ابحث عن منتج..."
+                aria-label="البحث في المنتجات"
+              />
+            </div>
+          </div>
+          <div class="products-grid" id="productsGrid"></div>
+        </div>
+      </section>
+
+      <section class="offer-banner section" id="offers">
+        <div class="container offer-inner">
+          <div class="offer-copy">
+            <span class="eyebrow light">🔥 عرض خاص لفترة محدودة</span>
+            <h2>نظّم منزلك بأقل تكلفة</h2>
+            <div class="offer-pricing">
+              <span class="old-price">299 درهم</span>
+              <span class="new-price">149 درهم</span>
+            </div>
+            <button class="btn btn-primary" data-buy-product="promoPack">
+              اطلب الآن
+            </button>
+          </div>
+
+          <div class="countdown-box" aria-live="polite">
+            <h3>العرض سينتهي خلال</h3>
+            <div class="countdown" id="countdown">
+              <div><span id="days">00</span><small>يوم</small></div>
+              <div><span id="hours">00</span><small>ساعة</small></div>
+              <div><span id="minutes">00</span><small>دقيقة</small></div>
+              <div><span id="seconds">00</span><small>ثانية</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="before-after section" id="about">
+        <div class="container">
+          <div class="section-heading text-center">
+            <span class="eyebrow">قبل وبعد</span>
+            <h2>شوف الفرق بنفسك</h2>
+          </div>
+          <div class="before-after-grid">
+            <div class="compare-card">
+              <div class="compare-head">
+                <span>قبل</span>
+              </div>
+              <img
+                src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80"
+                alt="خزانة غير منظمة"
+              />
+            </div>
+            <div class="compare-card">
+              <div class="compare-head after">
+                <span>بعد</span>
+              </div>
+              <img
+                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+                alt="خزانة منظمة"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews section">
+        <div class="container">
+          <div class="section-heading text-center">
+            <span class="eyebrow">آراء العملاء</span>
+            <h2>⭐ ماذا يقول عملاؤنا؟</h2>
+          </div>
+          <div class="reviews-grid" id="reviewsGrid"></div>
+        </div>
+      </section>
+
+      <section class="faq section">
+        <div class="container faq-wrap">
+          <div class="section-heading">
+            <span class="eyebrow">الأسئلة الشائعة</span>
+            <h2>الأسئلة الأكثر شيوعًا</h2>
+          </div>
+
+          <div class="faq-list">
+            <div class="faq-item active">
+              <button class="faq-question">هل الدفع عند الاستلام متوفر؟</button>
+              <div class="faq-answer">
+                نعم، الدفع عند الاستلام متوفر في أغلب المدن المغربية، كما يمكنك
+                التواصل معنا مباشرة لتأكيد الطلب.
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">هل توصلون لجميع المدن المغربية؟</button>
+              <div class="faq-answer">
+                نعم، نوفر التوصيل إلى معظم المدن المغربية، مع إمكانية تخصيص الشحن
+                حسب المدينة والجهة.
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">كم يستغرق التوصيل؟</button>
+              <div class="faq-answer">
+                مدة التوصيل تختلف حسب المدينة، وغالبًا ما تتراوح بين 24 و72 ساعة
+                في المدن الكبرى.
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">هل يمكن إرجاع المنتج؟</button>
+              <div class="faq-answer">
+                نعم، يمكن إرجاع المنتج في حال كان به عيب أو مطابق غير صحيح، مع
+                الالتزام بسياسة الاسترجاع المعتمدة من المتجر.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo footer-logo">
+            <span class="logo-mark">دار</span>
+            <span class="logo-text">الترتيب</span>
+          </div>
+          <p>
+            حلول ذكية لتنظيم منزلك واستغلال المساحة بشكل أفضل، مع منتجات عملية
+            ومواصفات عالية الجودة.
+          </p>
+        </div>
+
+        <div>
+          <h3>روابط سريعة</h3>
+          <ul>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#shop">المتجر</a></li>
+            <li><a href="#offers">العروض</a></li>
+            <li><a href="#about">من نحن</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>معلومات الاتصال</h3>
+          <ul>
+            <li>📞 0776260693</li>
+            <li>📍 المغرب</li>
+            <li>💬 WhatsApp</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>سياسات</h3>
+          <ul>
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">شروط الاستخدام</a></li>
+            <li><a href="#">سياسة الشحن</a></li>
+            <li><a href="#">سياسة الاسترجاع</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© 2026 دار الترتيب. كل الحقوق محفوظة.</p>
+      </div>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/212776260693" target="_blank" rel="noreferrer" aria-label="واتساب">
+      WhatsApp
+    </a>
+
+    <button class="call-float" aria-label="اتصال مباشر" onclick="window.location.href='tel:0776260693'">
+      📞 اتصل بنا
+    </button>
+
+    <aside class="cart-panel" id="cartPanel" aria-live="polite">
+      <div class="cart-header">
+        <h3>السلة</h3>
+        <button class="close-cart" id="closeCart" aria-label="إغلاق السلة">✕</button>
+      </div>
+
+      <div class="cart-items" id="cartItems"></div>
+
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>المجموع</span>
+          <strong id="cartTotal">0 درهم</strong>
+        </div>
+        <button class="btn btn-primary full-width" id="checkoutBtn">إتمام الطلب</button>
+      </div>
+    </aside>
+
+    <div class="modal" id="productModal" aria-hidden="true">
+      <div class="modal-content product-modal-content">
+        <button class="close-modal" data-close="productModal" aria-label="إغلاق">✕</button>
+        <div class="modal-body" id="productModalBody"></div>
+      </div>
+    </div>
+
+    <div class="modal" id="quickOrderModal" aria-hidden="true">
+      <div class="modal-content order-modal-content">
+        <button class="close-modal" data-close="quickOrderModal" aria-label="إغلاق">✕</button>
+        <h3>⚡ الطلب السريع</h3>
+        <form id="quickOrderForm">
+          <div class="form-grid">
+            <label>
+              الاسم الكامل
+              <input type="text" name="name" placeholder="أدخل الاسم" required />
+            </label>
+            <label>
+              رقم الهاتف
+              <input type="tel" name="phone" placeholder="0770000000" required />
+            </label>
+            <label>
+              المدينة
+              <select name="city" required>
+                <option value="">اختر المدينة</option>
+                <option>الدار البيضاء</option>
+                <option>الرباط</option>
+                <option>مراكش</option>
+                <option>طنجة</option>
+                <option>فاس</option>
+                <option>أكادير</option>
+                <option>مكناس</option>
+                <option>وجدة</option>
+                <option>القنيطرة</option>
+                <option>تطوان</option>
+                <option>الجديدة</option>
+                <option>آسفي</option>
+                <option>بني ملال</option>
+                <option>الناظور</option>
+                <option>سطات</option>
+                <option>خريبكة</option>
+                <option>العرائش</option>
+                <option>القصر الكبير</option>
+                <option>الصويرة</option>
+                <option>ورزازات</option>
+                <option>تارودانت</option>
+                <option>الحسيمة</option>
+                <option>أخرى</option>
+              </select>
+            </label>
+            <label>
+              الكمية
+              <input type="number" name="qty" min="1" value="1" required />
+            </label>
+          </div>
+
+          <label>
+            العنوان بالتفصيل
+            <textarea name="address" rows="3" placeholder="اكتب عنوانك بالتفصيل" required></textarea>
+          </label>
+
+          <label>
+            ملاحظات الطلب
+            <textarea name="notes" rows="3" placeholder="أي ملاحظات إضافية؟"></textarea>
+          </label>
+
+          <button type="submit" class="btn btn-primary full-width">تأكيد الطلب</button>
+        </form>
+      </div>
+    </div>
+
+    <button class="admin-toggle" id="adminToggle" aria-label="لوحة الإدارة">لوحة الإدارة</button>
+
+    <section class="admin-panel" id="adminPanel">
+      <div class="container admin-inner">
+        <div class="section-heading">
+          <span class="eyebrow">لوحة الإدارة</span>
+          <h2>إدارة المتجر</h2>
+        </div>
+
+        <div class="admin-grid">
+          <div class="admin-card">
+            <h3>المنتجات</h3>
+            <ul>
+              <li>إضافة منتج</li>
+              <li>تعديل سعر المنتج</li>
+              <li>تحديث الخصم</li>
+              <li>إدارة الصور والأبعاد</li>
+            </ul>
+          </div>
+          <div class="admin-card">
+            <h3>الطلبات</h3>
+            <ul>
+              <li>رقم الطلب</li>
+              <li>اسم العميل</li>
+              <li>الهاتف</li>
+              <li>حالة الطلب</li>
+            </ul>
+          </div>
+          <div class="admin-card">
+            <h3>العروض</h3>
+            <ul>
+              <li>خصومات</li>
+              <li>كوبونات</li>
+              <li>عد تنازلي</li>
+              <li>شحن حسب المدينة</li>
+            </ul>
+          </div>
+          <div class="admin-card">
+            <h3>الإعدادات</h3>
+            <ul>
+              <li>اسم المتجر</li>
+              <li>رقم الهاتف</li>
+              <li>WhatsApp</li>
+              <li>الشحن والدفع</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
